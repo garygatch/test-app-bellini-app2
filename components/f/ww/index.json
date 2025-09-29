@@ -1,0 +1,419 @@
+{
+  "type": "custom-component",
+  "name": "ww",
+  "children": [
+    {
+      "name": "div",
+      "classList": [
+        "modal-header"
+      ],
+      "children": [
+        {
+          "name": "div",
+          "classList": [
+            "modal-title"
+          ],
+          "children": [
+            {
+              "name": "text",
+              "textContent": "Ww",
+              "evaluate": false
+            }
+          ]
+        },
+        {
+          "name": "div",
+          "classList": [
+            "modal-close"
+          ],
+          "events": {
+            "click": "$ctrl.onCancelClick()"
+          },
+          "children": [
+            {
+              "name": "text",
+              "textContent": "×",
+              "evaluate": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "data-id",
+          "value": "YMGGlL"
+        }
+      ],
+      "classList": [
+        "modal-body"
+      ],
+      "conditionalClasses": [],
+      "conditionalStyles": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "ww-page1",
+          "nodeName": "ww-page1",
+          "elementId": "",
+          "attributes": [
+            {
+              "property": "data-id",
+              "value": "g7MmVb"
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "conditionalStyles": [],
+          "contentType": "text",
+          "displayExpression": "$ctrl.currentPageIndex === 0",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [],
+          "comments": "",
+          "type": "custom-component",
+          "ownerId": "68d9d5d4a1e45432642d2564",
+          "ownerType": "app",
+          "expressions": []
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "div",
+      "classList": [
+        "modal-footer"
+      ],
+      "children": [
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [],
+          "type": "core-component",
+          "expressions": [
+            {
+              "expression": "\"secondary\"",
+              "to": "type"
+            },
+            {
+              "expression": "'Previous'",
+              "to": "label"
+            },
+            {
+              "expression": "$ctrl.onPreviousClick()",
+              "to": "onClick"
+            },
+            {
+              "expression": "!$ctrl.canPreviousPage()",
+              "to": "isDisabled"
+            }
+          ]
+        },
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [],
+          "type": "core-component",
+          "expressions": [
+            {
+              "expression": "\"secondary\"",
+              "to": "type"
+            },
+            {
+              "expression": "'Next'",
+              "to": "label"
+            },
+            {
+              "expression": "$ctrl.onNextClick()",
+              "to": "onClick"
+            },
+            {
+              "expression": "!$ctrl.canNextPage()",
+              "to": "isDisabled"
+            }
+          ]
+        },
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [
+            "btn-cancel"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [],
+          "type": "core-component",
+          "expressions": [
+            {
+              "expression": "\"default\"",
+              "to": "type"
+            },
+            {
+              "expression": "'Cancel'",
+              "to": "label"
+            },
+            {
+              "expression": "$ctrl.onCancelClick()",
+              "to": "onClick"
+            }
+          ]
+        },
+        {
+          "name": "Button",
+          "nodeName": "bln-button",
+          "attributes": [
+            {
+              "property": "core",
+              "value": ""
+            }
+          ],
+          "classList": [
+            "btn-ok"
+          ],
+          "conditionalClasses": [],
+          "contentType": "text",
+          "displayExpression": "",
+          "events": {},
+          "iterate": {
+            "array": "",
+            "variable": "",
+            "trackByIndex": false
+          },
+          "styles": [],
+          "children": [],
+          "type": "core-component",
+          "expressions": [
+            {
+              "expression": "\"primary\"",
+              "to": "type"
+            },
+            {
+              "expression": "'Finish'",
+              "to": "label"
+            },
+            {
+              "expression": "$ctrl.onOkClick()",
+              "to": "onClick"
+            },
+            {
+              "expression": "!$ctrl.canFinish()",
+              "to": "isDisabled"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "onOkClick",
+      "description": "This function is called when Finish button is clicked.",
+      "type": "method",
+      "body": "$ctrl.result = 'ok'\n$ctrl.onClose()",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "onCancelClick",
+      "description": "This function is called when Cancel button is clicked.",
+      "type": "method",
+      "body": "$ctrl.result = 'cancel'\n$ctrl.onClose()",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "currentPageIndex",
+      "description": "The current page index.",
+      "type": "property",
+      "value": "0"
+    },
+    {
+      "name": "onNextClick",
+      "description": "This function is called when Next button is clicked.",
+      "type": "method",
+      "body": "$ctrl.currentPageIndex = Math.min($ctrl.totalPages - 1, $ctrl.currentPageIndex + 1)",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "onPreviousClick",
+      "description": "This function is called when Previous button is clicked.",
+      "type": "method",
+      "body": "$ctrl.currentPageIndex = Math.max(0, $ctrl.currentPageIndex - 1)",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "canPreviousPage",
+      "description": "This function checks if the user can navigate to the previous page.",
+      "type": "method",
+      "body": "return $ctrl.currentPageIndex > 0",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "canNextPage",
+      "description": "This function checks if the user can navigate to the next page.",
+      "type": "method",
+      "body": "return $ctrl.currentPageIndex < $ctrl.totalPages - 1",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "canFinish",
+      "description": "This function determines if the Finish button can be clicked.",
+      "type": "method",
+      "body": "return $ctrl.currentPageIndex === $ctrl.totalPages - 1",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "totalPages",
+      "description": "The total number of pages.",
+      "type": "property",
+      "value": "1"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "onClose",
+      "type": "<",
+      "default": "() => {}",
+      "description": "This function should be called to close the modal.",
+      "visibleWhen": "",
+      "label": "",
+      "group": "",
+      "example": "",
+      "actions": [],
+      "propertyType": "function"
+    },
+    {
+      "name": "result",
+      "type": "<",
+      "default": "",
+      "description": "The result of the modal that is returned after the modal is closed.",
+      "visibleWhen": "",
+      "label": "",
+      "group": "",
+      "example": "",
+      "actions": [],
+      "propertyType": "enum",
+      "enumOptions": [
+        {
+          "value": "ok"
+        },
+        {
+          "value": "cancel"
+        }
+      ]
+    }
+  ],
+  "modules": [],
+  "styles": [],
+  "parentDirectoryId": "gpbEn6Bv-y3xkCMaxZW9t",
+  "localStylesheets": [
+    {
+      "path": "index.css"
+    }
+  ]
+}

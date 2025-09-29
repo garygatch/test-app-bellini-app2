@@ -1,0 +1,39 @@
+{
+  "name": "test-app",
+  "type": "app",
+  "defaultPage": "home",
+  "config": {
+    "config": {
+      "parameters": [],
+      "script": ""
+    },
+    "modules": [],
+    "properties": {
+      "version": "1.0.0-SNAPSHOT"
+    },
+    "environments": [],
+    "themes": [],
+    "auth": {
+      "enabled": false,
+      "mockedUserAccounts": []
+    }
+  },
+  "directories": {
+    "assets": [
+      {
+        "id": "W_Jws_utE8E-jr49c4AMz",
+        "name": "w"
+      }
+    ],
+    "components": [
+      {
+        "id": "gpbEn6Bv-y3xkCMaxZW9t",
+        "name": "f"
+      }
+    ],
+    "pages": [],
+    "scripts": [],
+    "services": [],
+    "stylesheets": []
+  }
+}

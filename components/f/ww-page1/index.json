@@ -1,0 +1,23 @@
+{
+  "type": "custom-component",
+  "name": "ww-page1",
+  "nodeName": "ww-page1",
+  "children": [
+    {
+      "name": "h3",
+      "nodeName": "h3",
+      "children": [
+        {
+          "name": "text",
+          "nodeName": "text",
+          "textContent": "PAGE 1"
+        }
+      ]
+    }
+  ],
+  "variables": [],
+  "bindings": [],
+  "modules": [],
+  "styles": [],
+  "parentDirectoryId": "gpbEn6Bv-y3xkCMaxZW9t"
+}
